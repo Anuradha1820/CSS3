@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anuradha Portfolio</title>
+
+</head>
+
+<body>
+
+<div class="theme-box">
+<label>
+<input type="checkbox" id="theme">
+Dark Mode
+</label>
+</div>
+
+<header>
+<nav>
+<h2>Anuradha</h2>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Hello, I'm Anuradha </h1>
+<p>CSE Student | Web Developer | Eager to Learn New Skills and Technologies</p>
+</section>
+
+<section class="grid">
+
+<div class="card">
+<h3>About Me</h3>
+<p>
+Computer Science Engineering student passionate about
+web development and design.
+</p>
+</div>
+
+<div class="card">
+<h3>Skills</h3>
+<p>
+HTML, CSS, GitHub, Python Basics, Figma, Artist
+</p>
+</div>
+
+<div class="card">
+<h3>Project 1</h3>
+<p>
+Personal Portfolio Website using HTML & CSS.
+</p>
+</div>
+
+<div class="card">
+<h3>Project 2</h3>
+<p>
+Responsive Landing Page using CSS Grid and Flexbox.
+</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>
+B.E Computer Science Engineering</p>
+</div>
+
+<div class="card">
+<h3>Contact</h3><p>
+Email: anuradha@example.com</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Anuradha Portfolio</p>
+</footer>
+
+</body>
+<style>
+
+:root{
+  --bg:#F8F4EE;
+  --text:#3A2E2A;
+  --card:#FFFDF9;
+  --primary:#A45A52;
+  --secondary:#D6B89C;
+  --shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+body:has(#theme:checked){
+  --bg:#1F1A17;
+  --text:#F5EDE3;
+  --card:#2B2521;
+  --primary:#C07A5A;
+  --secondary:#8B6A56;
+  --shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s ease;
+}
+
+
+
+.theme-box{
+  text-align:center;
+  padding:15px;
+  font-weight:600;
+  background:var(--bg);
+}
+
+.theme-box input{
+  margin-right:8px;
+}
+
+
+
+header{
+  background:var(--primary);
+  padding:18px 30px;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h2{
+  color:white;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  opacity:0.8;
+}
+
+
+
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color:white;
+}
+
+.hero h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:1.1rem;
+}
+
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:25px;
+  padding:40px;
+}
+
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+
+.card h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+
+
+@media(min-width:768px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(min-width:1024px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+
+
+footer{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+</style>
+</html>
